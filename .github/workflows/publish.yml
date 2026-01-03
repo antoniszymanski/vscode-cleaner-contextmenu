@@ -1,0 +1,42 @@
+name: publish
+
+on: workflow_dispatch
+
+permissions: 
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: latest
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build
+        run: pnpm build
+
+      - name: Move files
+        run: cp LICENSE dist
+
+      - name: Push
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: dist
+          FOLDER: ./dist
+          MESSAGE: "build({sha}): \"{msg}\""
+          SKIP_EMPTY_COMMITS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

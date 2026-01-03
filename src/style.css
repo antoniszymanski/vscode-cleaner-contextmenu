@@ -1,0 +1,15 @@
+/* SPDX-FileCopyrightText: 2026 Antoni Szymański */
+/* SPDX-License-Identifier: MPL-2.0 */
+
+.action-item:has(.action-label[aria-label="Rename Symbol"]),
+.action-item:has(.action-label[aria-label="Change All Occurrences"]),
+.action-item:has(.action-label[aria-label="Format Document"]),
+.action-item:has(.action-label[aria-label="Format Document With..."]),
+.action-item:has(.action-label[aria-label="Cut"]),
+.action-item:has(.action-label[aria-label="Copy"]),
+.action-item:has(.action-label[aria-label="Paste"]),
+.action-item:has(.action-label[aria-label="Command Palette..."]),
+.visible.scrollbar.vertical,
+.shadow {
+  display: none !important;
+}

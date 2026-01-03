@@ -1,0 +1,14 @@
+{
+  "license": "MPL-2.0",
+  "type": "module",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "clean-css-loader": "^4.2.1",
+    "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
