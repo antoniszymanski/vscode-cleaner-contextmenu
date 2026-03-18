@@ -2,7 +2,7 @@ name: publish
 
 on: workflow_dispatch
 
-permissions: 
+permissions:
   contents: write
 
 jobs:
@@ -37,6 +37,6 @@ jobs:
           REPO: self
           BRANCH: dist
           FOLDER: ./dist
-          MESSAGE: "build({sha}): \"{msg}\""
+          MESSAGE: 'build({sha}): "{msg}"'
           SKIP_EMPTY_COMMITS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
