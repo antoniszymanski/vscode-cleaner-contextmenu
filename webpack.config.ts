@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2026 Antoni Szymański
 // SPDX-License-Identifier: MPL-2.0
 
-import webpack from "webpack"
+import type webpack from "webpack"
 
 const config: webpack.Configuration = {
 	mode: "production",
