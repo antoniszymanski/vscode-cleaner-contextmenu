@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: MPL-2.0
 
 import { defineConfig } from "@rspack/cli"
-import type { LightningcssLoaderOptions } from "@rspack/core"
 
 export default defineConfig({
 	mode: "production",
@@ -18,13 +17,8 @@ export default defineConfig({
 			},
 			{
 				test: /\.css$/,
-				use: {
-					loader: "builtin:lightningcss-loader",
-					options: <LightningcssLoaderOptions>{
-						minify: true,
-					},
-				},
 				type: "asset/source",
+				use: "clean-css-loader",
 			},
 		],
 	},
