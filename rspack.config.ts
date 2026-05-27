@@ -5,6 +5,7 @@ import { defineConfig } from "@rspack/cli"
 
 export default defineConfig({
 	mode: "production",
+	target: "browserslist:electron",
 	output: {
 		clean: true,
 	},
@@ -12,7 +13,7 @@ export default defineConfig({
 		rules: [
 			{
 				test: /\.ts$/,
-				loader: "ts-loader",
+				loader: "builtin:swc-loader",
 			},
 			{
 				test: /\.css$/,

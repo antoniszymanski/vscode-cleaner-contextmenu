@@ -11,7 +11,6 @@
 		"@rspack/cli": "^2.0.4",
 		"@rspack/core": "^2.0.4",
 		"clean-css-loader": "^4.2.1",
-		"ts-loader": "^9.5.4",
 		"typescript": "^6.0.3"
 	}
 }
