@@ -2,17 +2,16 @@
 	"license": "MPL-2.0",
 	"type": "module",
 	"scripts": {
-		"build": "webpack",
+		"build": "rspack build",
 		"format": "biome format --write",
 		"check": "biome check --write"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.16",
+		"@rspack/cli": "^2.0.4",
+		"@rspack/core": "^2.0.4",
 		"clean-css-loader": "^4.2.1",
-		"loader-utils": "^3.3.1",
 		"ts-loader": "^9.5.4",
-		"ts-node": "^10.9.2",
-		"webpack": "^5.104.1",
-		"webpack-cli": "^7.0.0"
+		"typescript": "^6.0.3"
 	}
 }

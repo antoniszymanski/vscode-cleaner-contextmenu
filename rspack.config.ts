@@ -1,9 +1,9 @@
 // SPDX-FileCopyrightText: 2026 Antoni Szymański
 // SPDX-License-Identifier: MPL-2.0
 
-import type webpack from "webpack"
+import { defineConfig } from "@rspack/cli"
 
-const config: webpack.Configuration = {
+export default defineConfig({
 	mode: "production",
 	output: {
 		clean: true,
@@ -26,11 +26,8 @@ const config: webpack.Configuration = {
 	},
 	optimization: {
 		chunkIds: "total-size",
-		moduleIds: "size",
 	},
 	performance: {
 		hints: false,
 	},
-}
-
-export default config
+})
