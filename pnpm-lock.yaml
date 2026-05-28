@@ -19,7 +19,10 @@ importers:
         version: 2.0.4
       clean-css-loader:
         specifier: ^4.2.1
-        version: 4.2.1
+        version: 4.2.1(loader-utils@3.3.1)
+      loader-utils:
+        specifier: ^3.3.1
+        version: 3.3.1
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -198,6 +201,10 @@ packages:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
     engines: {node: '>= 10.0'}
 
+  loader-utils@3.3.1:
+    resolution: {integrity: sha512-FMJTLMXfCLMLfJxcX9PFqX5qD88Z5MRGaZCVzfuqeZSPsyiBzs+pahDQjbIWz2QIzPZz0NX9Zy4FX3lmK6YHIg==}
+    engines: {node: '>= 12.13.0'}
+
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
@@ -330,13 +337,17 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  clean-css-loader@4.2.1:
+  clean-css-loader@4.2.1(loader-utils@3.3.1):
     dependencies:
       clean-css: 5.3.3
+    optionalDependencies:
+      loader-utils: 3.3.1
 
   clean-css@5.3.3:
     dependencies:
       source-map: 0.6.1
+
+  loader-utils@3.3.1: {}
 
   source-map@0.6.1: {}
 
