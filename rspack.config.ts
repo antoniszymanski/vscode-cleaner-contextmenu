@@ -17,7 +17,7 @@ export default defineConfig({
 			},
 			{
 				test: /\.css$/,
-				use: "clean-css-loader",
+				loader: "clean-css-loader",
 				type: "asset/source",
 			},
 		],
