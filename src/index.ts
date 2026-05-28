@@ -100,7 +100,7 @@ function isSeparator(actionItem: HTMLElement) {
 
 let mouseY = 0
 document.addEventListener("mousedown", ev => {
-	if (ev.button === 2) {
+	if (ev.button === 2 /* right button */) {
 		mouseY = ev.clientY
 	}
 })
