@@ -1,6 +1,6 @@
 {
 	"files.readonlyInclude": {
-		"out/**": true
+		"dist/**": true
 	},
 	"[typescript][css][json]": {
 		"editor.defaultFormatter": "biomejs.biome"
