@@ -94,9 +94,7 @@ function processNode(node: Node) {
 
 const menuStyleId = "menu-style"
 
-function isSeparator(actionItem: HTMLElement) {
-	return actionItem.matches(":has(> .separator)")
-}
+const isSeparator = (actionItem: HTMLElement) => actionItem.matches(":has(> .separator)")
 
 let mouseY = 0
 document.addEventListener("mousedown", ev => {
