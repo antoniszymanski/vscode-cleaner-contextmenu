@@ -1,7 +1,10 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.4.16/schema.json",
-	"files": {
-		"includes": ["**", "!dist"]
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
 	},
 	"formatter": {
 		"formatWithErrors": true,
