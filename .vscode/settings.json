@@ -2,6 +2,8 @@
 	"files.readonlyInclude": {
 		"out/**": true
 	},
-	"editor.defaultFormatter": "biomejs.biome",
+	"[typescript][css][json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
 	"js/ts.tsdk.path": "node_modules/typescript/lib"
 }
