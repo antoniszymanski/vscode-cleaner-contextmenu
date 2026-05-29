@@ -12,15 +12,15 @@ Element.prototype.attachShadow = function () {
 	return shadowRoot
 }
 
-// new MutationObserver((mutations) => {
-//   for (const mutation of mutations) {
-//     for (const node of mutation.addedNodes) {
-//       if (node instanceof Element && node.shadowRoot != null) {
-//         observeRoot(node.shadowRoot);
-//       }
-//     }
-//   }
-// }).observe(document.body, { childList: true, subtree: true });
+// new MutationObserver(mutations => {
+// 	for (const mutation of mutations) {
+// 		for (const node of mutation.addedNodes) {
+// 			if (node instanceof Element && node.shadowRoot !== null) {
+// 				observeRoot(node.shadowRoot)
+// 			}
+// 		}
+// 	}
+// }).observe(document.body, { childList: true, subtree: true })
 
 function observeRoot(root: ShadowRoot) {
 	new MutationObserver(mutations => {
