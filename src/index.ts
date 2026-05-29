@@ -48,6 +48,7 @@ function processNode(node: Node) {
 		return
 	}
 
+	const menuStyleId = "menu-style"
 	if (!menu.matches(`:has(> style#${menuStyleId})`)) {
 		const style = document.createElement("style")
 		style.id = menuStyleId
@@ -61,6 +62,7 @@ function processNode(node: Node) {
 			actionItems.push(child)
 		}
 	}
+	const isSeparator = (actionItem: HTMLElement) => actionItem.matches(":has(> .separator)")
 	for (const [index, actionItem] of actionItems.entries()) {
 		if (
 			((index === 0 || index === actionItems.length - 1) && isSeparator(actionItem)) ||
@@ -91,10 +93,6 @@ function processNode(node: Node) {
 		menu.style.top = `${menuTop}px`
 	}
 }
-
-const menuStyleId = "menu-style"
-
-const isSeparator = (actionItem: HTMLElement) => actionItem.matches(":has(> .separator)")
 
 let mouseY = 0
 document.addEventListener("mousedown", ev => {
