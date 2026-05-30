@@ -72,7 +72,7 @@ function processNode(node: Node) {
 		}
 	}
 
-	let menuTop = parseInt(menu.style.top, 10)
+	let menuTop = menu.offsetTop
 	const menuHeight = menu.clientHeight
 	const titlebarHeight = 40
 	const windowHeight = window.innerHeight
