@@ -9,6 +9,7 @@
 	"formatter": {
 		"formatWithErrors": true,
 		"indentStyle": "tab",
+		"lineEnding": "lf",
 		"lineWidth": 120
 	},
 	"javascript": {
