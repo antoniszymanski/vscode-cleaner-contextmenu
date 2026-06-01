@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MPL-2.0
 
 import { defineConfig } from "@rspack/cli"
+import { TsCheckerRspackPlugin } from "ts-checker-rspack-plugin"
 
 export default defineConfig({
 	mode: "production",
@@ -28,6 +29,7 @@ export default defineConfig({
 	optimization: {
 		chunkIds: "total-size",
 	},
+	plugins: [new TsCheckerRspackPlugin()],
 	performance: {
 		hints: false,
 	},
