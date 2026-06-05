@@ -17,6 +17,9 @@ importers:
       '@rspack/core':
         specifier: ^2.0.5
         version: 2.0.5
+      '@tsconfig/strictest':
+        specifier: ^2.0.8
+        version: 2.0.8
       clean-css-loader:
         specifier: ^4.2.1
         version: 4.2.1(loader-utils@3.3.1)(schema-utils@4.3.3)
@@ -307,6 +310,9 @@ packages:
 
   '@rspack/lite-tapable@1.1.1':
     resolution: {integrity: sha512-d1p93zyCSvI8ASw6pJWzDOx+RNh3Utu3DSQRPBibmDJEg57Q6kEcYBY0xJUD0m4tJ7JNu8KKKRB1EKhLM7RLrw==}
+
+  '@tsconfig/strictest@2.0.8':
+    resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
   '@tybys/wasm-util@0.10.2':
     resolution: {integrity: sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==}
@@ -725,6 +731,8 @@ snapshots:
       '@rspack/binding': 2.0.5
 
   '@rspack/lite-tapable@1.1.1': {}
+
+  '@tsconfig/strictest@2.0.8': {}
 
   '@tybys/wasm-util@0.10.2':
     dependencies:
