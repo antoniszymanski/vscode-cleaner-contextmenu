@@ -66,7 +66,7 @@ function processNode(node: Node) {
 	for (const [index, actionItem] of actionItems.entries()) {
 		if (
 			((index === 0 || index === actionItems.length - 1) && isSeparator(actionItem)) ||
-			(index < actionItems.length - 1 && isSeparator(actionItem) && isSeparator(actionItems[index + 1]))
+			(index < actionItems.length - 1 && isSeparator(actionItem) && isSeparator(actionItems[index + 1] as HTMLElement))
 		) {
 			actionItem.style.display = "none"
 		}
