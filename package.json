@@ -8,7 +8,7 @@
 		"check": "biome check --write"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.4.16",
+		"@biomejs/biome": "2.5.0",
 		"@rspack/cli": "^2.0.5",
 		"@rspack/core": "^2.0.5",
 		"@tsconfig/strictest": "^2.0.8",
