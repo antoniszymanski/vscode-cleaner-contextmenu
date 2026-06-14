@@ -1,11 +1,11 @@
 {
+	"private": true,
 	"license": "MPL-2.0",
 	"type": "module",
-	"private": true,
 	"scripts": {
 		"build": "rspack build",
-		"format": "biome format --write",
-		"check": "biome check --write"
+		"check": "biome check --write",
+		"format": "biome format --write"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.0",
