@@ -23,14 +23,15 @@ Element.prototype.attachShadow = function () {
 // 	}
 // }).observe(document.body, { childList: true, subtree: true })
 
-function observeRoot(root: ShadowRoot) {
-	new MutationObserver(mutations => {
-		for (const mutation of mutations) {
-			for (const node of mutation.addedNodes) {
-				processNode(node)
-			}
+const observer = new MutationObserver(mutations => {
+	for (const mutation of mutations) {
+		for (const node of mutation.addedNodes) {
+			processNode(node)
 		}
-	}).observe(root, { childList: true, subtree: true })
+	}
+})
+function observeRoot(root: ShadowRoot) {
+	observer.observe(root, { childList: true, subtree: true })
 }
 
 function processNode(node: Node) {
