@@ -16,7 +16,7 @@ Element.prototype.attachShadow = function () {
 // new MutationObserver(mutations => {
 // 	for (const mutation of mutations) {
 // 		for (const node of mutation.addedNodes) {
-// 			if (node instanceof Element && node.shadowRoot !== null) {
+// 			if (node instanceof Element && node.shadowRoot) {
 // 				observeRoot(node.shadowRoot)
 // 			}
 // 		}
@@ -41,11 +41,11 @@ function processNode(node: Node) {
 		return
 	}
 	const menu = node.parentElement
-	if (menu === null) {
+	if (!menu) {
 		return
 	}
 	const actions = node.querySelector(":scope > .monaco-menu > .monaco-action-bar > .actions-container")
-	if (actions === null) {
+	if (!actions) {
 		return
 	}
 
@@ -58,7 +58,7 @@ function processNode(node: Node) {
 	}
 
 	const actionItems = []
-	for (let child = actions.firstElementChild; child !== null; child = child.nextElementSibling) {
+	for (let child = actions.firstElementChild; child; child = child.nextElementSibling) {
 		if (child instanceof HTMLElement && child.checkVisibility()) {
 			actionItems.push(child)
 		}
