@@ -97,7 +97,5 @@ function processNode(node: Node) {
 
 let mouseY = 0
 document.addEventListener("mousedown", ev => {
-	if (ev.button === 2 /* right button */) {
-		mouseY = ev.clientY
-	}
+	mouseY = ev.clientY
 })
