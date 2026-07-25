@@ -3,12 +3,10 @@
 
 import menuStyle from "./style.css"
 
-// @ts-expect-error
 // oxlint-disable-next-line typescript/unbound-method
-Element.prototype._attachShadow = Element.prototype.attachShadow
+const attachShadow = Element.prototype.attachShadow
 Element.prototype.attachShadow = function () {
-	// @ts-expect-error
-	const shadowRoot = this._attachShadow({ mode: "open" })
+	const shadowRoot = attachShadow.call(this, { mode: "open" })
 	observeRoot(shadowRoot)
 	return shadowRoot
 }
