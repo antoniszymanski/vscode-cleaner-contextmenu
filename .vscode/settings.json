@@ -2,7 +2,7 @@
 	"files.readonlyInclude": {
 		"dist/**": true
 	},
-	"[typescript][css][json][jsonc][json5]": {
+	"[typescript][css][json][jsonc]": {
 		"editor.defaultFormatter": "oxc.oxc-vscode"
 	},
 	"js/ts.tsdk.path": "node_modules/typescript/lib"
