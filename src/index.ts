@@ -11,16 +11,6 @@ Element.prototype.attachShadow = function (init) {
 	return shadowRoot
 }
 
-// new MutationObserver(mutations => {
-// 	for (const mutation of mutations) {
-// 		for (const node of mutation.addedNodes) {
-// 			if (node instanceof Element && node.shadowRoot) {
-// 				observeRoot(node.shadowRoot)
-// 			}
-// 		}
-// 	}
-// }).observe(document.body, { childList: true, subtree: true })
-
 const observer = new MutationObserver(mutations => {
 	for (const mutation of mutations) {
 		for (const node of mutation.addedNodes) {
