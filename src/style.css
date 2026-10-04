@@ -10,6 +10,7 @@
 .action-item:has(.action-label[aria-label="Format Document"]),
 .action-item:has(.action-label[aria-label="Format Document With..."]),
 .action-item:has(.action-label[aria-label="Start Dictation in Editor"]),
+.action-item:has(.action-label[aria-label="Share"]),
 .action-item:has(.action-label[aria-label="Cut"]),
 .action-item:has(.action-label[aria-label="Copy"]),
 .action-item:has(.action-label[aria-label="Paste"]),
