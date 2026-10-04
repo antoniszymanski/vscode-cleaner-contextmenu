@@ -5,8 +5,8 @@ import menuStyle from "./style.css"
 
 // oxlint-disable-next-line typescript/unbound-method
 const attachShadow = Element.prototype.attachShadow
-Element.prototype.attachShadow = function () {
-	const shadowRoot = attachShadow.call(this, { mode: "open" })
+Element.prototype.attachShadow = function (init) {
+	const shadowRoot = attachShadow.call(this, init)
 	observeRoot(shadowRoot)
 	return shadowRoot
 }
