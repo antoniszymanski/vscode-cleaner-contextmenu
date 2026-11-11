@@ -37,7 +37,7 @@ importers:
         version: 4.8.3
       ts-checker-rspack-plugin:
         specifier: ^1.3.1
-        version: 1.7.2(@rspack/core@2.3.2)(typescript@7.0.2)
+        version: 1.8.0(@rspack/core@2.3.2)(typescript@7.0.2)
       typescript:
         specifier: ^7.0.0
         version: 7.0.2
@@ -827,8 +827,8 @@ packages:
     peerDependencies:
       tslib: '2'
 
-  ts-checker-rspack-plugin@1.7.2:
-    resolution: {integrity: sha512-ULLSEYtmJZcfSYy0oCdC00+DEnFdiCunMXG8SVotCyNqddyn3PE4lUb97gxfY7SadfvNStMO6SB3kWFrLGU1UQ==}
+  ts-checker-rspack-plugin@1.8.0:
+    resolution: {integrity: sha512-Vd/i6zi1X8p/LQyfKvh2gQLbvlUyHDAjA4hPOAAo0kC1XaqKdcr4WxBaVWQpQz1kJHCUo+dnIQYOAc4hIZCbrg==}
     peerDependencies:
       '@rspack/core': ^1.0.0 || ^2.0.0
       '@typescript/native-preview': ^7.0.0-0
@@ -1417,7 +1417,7 @@ snapshots:
     dependencies:
       tslib: 2.9.1
 
-  ts-checker-rspack-plugin@1.7.2(@rspack/core@2.3.2)(typescript@7.0.2):
+  ts-checker-rspack-plugin@1.8.0(@rspack/core@2.3.2)(typescript@7.0.2):
     dependencies:
       '@rspack/lite-tapable': 1.3.0
       chokidar: 4.0.3
