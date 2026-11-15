@@ -37,6 +37,10 @@ function processNode(node: Node) {
 	if (!actions) {
 		return
 	}
+	const editor = document.querySelector(".editor-container")
+	if (!editor) {
+		return
+	}
 
 	const menuStyleId = "menu-style"
 	if (!menu.matches(`:has(> style#${menuStyleId})`)) {
@@ -63,25 +67,13 @@ function processNode(node: Node) {
 		}
 	}
 
-	let menuTop = menu.offsetTop
-	const menuHeight = menu.clientHeight
-	const titlebarHeight = 40
-	const windowHeight = window.innerHeight
-	if (menuTop < titlebarHeight && menuHeight < 90) {
-		mouseY = menuTop
+	const editorRect = editor.getBoundingClientRect()
+	if (editorRect.height <= menu.clientHeight) {
+		menu.style.top = `${editorRect.bottom - menu.clientHeight}px`
+	} else if (mouseY - editorRect.top > editorRect.height - menu.clientHeight) {
+		menu.style.top = `${mouseY - menu.clientHeight}px`
 	} else {
-		if (mouseY < windowHeight / 2) {
-			menuTop = mouseY
-			if (menuTop + menuHeight > windowHeight) {
-				menuTop = windowHeight - menuHeight
-			}
-		} else {
-			menuTop = mouseY - menuHeight
-			if (menuTop < titlebarHeight) {
-				menuTop = titlebarHeight
-			}
-		}
-		menu.style.top = `${menuTop}px`
+		menu.style.top = `${mouseY}px`
 	}
 }
 
